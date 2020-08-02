@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Summary1">
+
+    <EditText
+        android:id="@+id/editTextDate1"
+        android:layout_width="105dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:onClick="datePicker"
+        android:text="Date"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDate2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFrom" />
+
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:layout_width="105dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:onClick="datePicker2"
+        android:text="Date"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextDate1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTo" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/title_activity_summary"
+        android:textColor="#0091EA"
+        android:textSize="36sp"
+        android:visibility="visible"
+        app:fontFamily="sans-serif-light"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ListView
+        android:id="@+id/listView300"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="#FAFAFA"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Custom range"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Last7Days"
+            android:text="Last 7 Days"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="125dp"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Last14Days"
+            android:text="Last 14 Days"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="125dp"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="ThisMonth"
+            android:text="This Month"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="125dp"></RadioButton>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="From:         "
+        app:layout_constraintEnd_toStartOf="@+id/textViewTo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <TextView
+        android:id="@+id/textViewTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="To:    "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewFrom"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
